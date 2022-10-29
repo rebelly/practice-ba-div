@@ -43,7 +43,7 @@ public class Program
     static int alternating_sign(int a)
     {
         int sum = 0;
-        int cur_num = sum % 10;
+        int cur_num = a % 10;
         char cur_sign = '+';
         while (a > 0)
         {
@@ -57,13 +57,14 @@ public class Program
                 cur_sign = '+';
             }
             a /= 10;
+            cur_num = a % 10;
         }
         return sum;
     }
     public static void Main()
     {
 
-        int x = int.Parse(Console.ReadLine());
+
 
         /* 1:
         int p = int.Parse(Console.ReadLine());
@@ -76,10 +77,9 @@ public class Program
         int x = int.Parse(Console.ReadLine());
         Console.WriteLine($"Сумма делителей числа {x}: {sum_divis(x)}");
          */
-
-        /* 3:
+         /* 3:
         int a = int.Parse(Console.ReadLine());
         Console.WriteLine($"Знакочередующаяся сумма числа: {a} равна {alternating_sign(a)}");
-         */
+        */
     }
 }
